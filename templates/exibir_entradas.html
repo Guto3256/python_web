@@ -15,7 +15,7 @@
 
     <ul class="entradas">
         {% for entrada in entradas %}
-            <li><h2><a href="/posts/{{loop.revindex}}">{{ entrada.titulo }}</a></h2>{{ entrada.texto|safe }}</li>
+            <li><h2><a href="/posts/{{entrada.id}}">{{ entrada.titulo }}</a></h2>{{ entrada.texto|safe }}<br>{{ entrada.data_criacao }}</li>
         {% else %}
             <li><em>Inacreditável. Até agora nenhuma entrada.</em></li>
         {% endfor %}
